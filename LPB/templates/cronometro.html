@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Cronômetro</title>
+</head>
+
+<body style="width: 100%;">
+    <script>
+        var upgradeTime = 3600;
+        var seconds = upgradeTime;
+        function timer() {
+          var days        = Math.floor(seconds/24/60/60);
+          var hoursLeft   = Math.floor((seconds) - (days*86400));
+          var hours       = Math.floor(hoursLeft/3600);
+          var minutesLeft = Math.floor((hoursLeft) - (hours*3600));
+          var minutes     = Math.floor(minutesLeft/60);
+          var remainingSeconds = seconds % 60;
+          function pad(n) {
+            return (n < 10 ? "0" + n : n);
+          }
+          document.getElementById('countdown').innerHTML = pad(days) + ":" + pad(hours) + ":" + pad(minutes) + ":" + pad(remainingSeconds);
+          if (seconds == 0) {
+            clearInterval(countdownTimer);
+            document.getElementById('countdown').innerHTML = "Completed";
+          } else {
+            seconds--;
+          }
+        }
+        var countdownTimer = setInterval('timer()', 1000);
+      </script>
+    
+    <header>
+        <div class="navbar navbar-light" style="background-color: #FFF6F0;">
+            <div class="container d-flex justify-content-between">
+                <a href="#" class="navbar-brand d-flex align-items-center">
+                    <strong> <i class="fa fa-clock-o" aria-hidden="true"></i> Cronômetro</strong>
+                </a>
+            </div>
+        </div>
+    </header> 
+
+    <main role="main">
+        <section class="jumbotron text-center" style="background-color: #DCEDC1; width: 100%; padding-bottom: 40px; padding-top: 40px; margin-bottom: 0px;">
+            <div class="container" style="width: 100%; display: inline-block;">
+                <div class="container" style="width: 100%;">
+                    <div class="row justify-content-md-center">
+                        <div class="col-md-12 col-lg-6">
+                            <div class="container">
+                                <h1 class="jumbotron-heading" style="width: 100%;"><i class="fa fa-hand-spock-o" aria-hidden="true"></i>Cronômetro</h1>
+                                <p class="lead text-muted">Mantenha o foco! <i class="fa fa-calendar" aria-hidden="true"></i></p>
+                                <div class="container" style="display: block;">
+                                  <div class="row">
+                                    <div class="col-md-12 text-center center-block">
+                                      <div id="tempo" type="button" class="btn btn-primary tamanho text"><span id="countdown" class="timer"></span></div>
+                                    </div>
+                                  </div>
+                                </div>
+                  
+                                <div class="container" style="display: block; margin-top: 10px;">
+                                  <div class="row justify-content-md-center" style="margin: auto">
+                                    <div class="col-md-12 text-center center-block">
+                                      <div class="btn-group text-center" style="width: fit-content;">
+                                        <button id="btn" type="button" class="btn btn-success">Iniciar</button>
+                                        <button id="btnContinue" type="button" class="btn btn-info">Continuar</button>
+                                        <button id="btnPause" type="button" class="btn btn-warning">Pausar</button>
+                                        <a id="btnStop" href="/relatorioTarefa/" class="btn btn-danger" role="button" aria-pressed="true">Parar</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="col-md-12 col-lg-6">
+                            <div class="container" style="width: 100%;">
+                              <div class="row justify-content-md-center">
+                                <div class="col center-block">
+                                    <img src="https://media0.giphy.com/media/RkX2zcpO79EAf82ESl/giphy.gif" alt="..." style="width: 70%; display: block;">
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-muted mt-5 mb-5">
+        <div class="container">
+            <p class="float-right">
+                <a href="#">Voltar para o topo</a>
+            </p>
+            <p>&copy; {{ info_sede.nome_empresa }}, 2021!</p>
+            <p> <i class="fa fa-star" aria-hidden="true"></i> Quer saber mais? <a target="_blank" href="{{ info_sede.email }}">Nos mande um e-mail</a> ou venha nos visitar no nosso <a target="_blank" href="{{ info_sede.instagram }}">Instagram</a>.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+</body>
+
+</html>

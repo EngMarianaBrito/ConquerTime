@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>{{ info_sede.nome_empresa }}</title>
+</head>
+
+<body  style="width: 100%;">    
+    <header>
+        <div class="collapse" id="navbarHeader" style="background-color: #FFF6F0; width: 100%;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-md-7 py-4">
+                        <div class="media">
+                            <img class="align-self-start mr-3" src="https://virtual.hr-congress.com/wp-content/uploads/2020/11/HUAPII_One-Platform.gif" alt="..." style="width: auto; height: 100px;">
+                            <div class="media-body">
+                              <h4 class="font-weight-bolder" style="color: #383949;">Sobre</h4>
+                              <p class="text-body text-dark">{{ info_sede.texto_sobre }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 offset-md-1 py-4">
+                        <h4 style="color: #383949;">Por onde começar?</h4>
+                        <ul class="list-unstyled">
+                            <li><a target="_blank" href="#" style="color: #FF8B94">Acessar/Criar Perfil</a></li>
+                            <li><a target="_blank" href="#" style="color: #FF8B94">Baixe o App</a></li>
+                            <li><a target="_blank" href="#" style="color: #FF8B94">Visite Nosso Blog</a></li>
+                            <li><a target="_blank" href="#" style="color: #FF8B94">Últimas Notícias</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="navbar navbar-light" style="background-color: #FFAAA5; width: 100%;">
+            <div class="container d-flex justify-content-between">
+                <a href="#" class="navbar-brand d-flex align-items-center">
+                    <strong><i class="fa fa-globe" aria-hidden="true"></i>{{ info_sede.nome_empresa }}</strong>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            </div>
+        </div>
+    </header>
+
+    <main role="main">
+        <section class="jumbotron text-center" style="background-color: #FFD3B6; width: 100%; padding-bottom: 40px; padding-top: 40px; margin-bottom: 0px;">
+            <div class="container" style="width: 100%; display: inline-block;">
+                <h1 class="jumbotron-heading" style="width: 100%; font-size: 2.0rem;"><i class="fa fa-hand-spock-o" aria-hidden="true"></i> Seja bem-vindo(a), convidado(a)!</h1>
+                <p class="lead text-muted">{{ info_sede.chamada }} <i class="fa fa-calendar" aria-hidden="true"></i></p>
+                <div class="container" style="width: 100%;">
+                    <div class="row justify-content-md-center">
+                        <div class="col-md-12 col-lg-7">
+                            <img src="https://brandmasteracademy.com/wp-content/uploads/2021/03/lifestyle.png" alt="..." style="width: 100%; display: inline-block;">
+                        </div>
+                        <div class="col-md-12 col-lg-5">
+                            <div class="card text-center box-shadow" style="margin: 10px; border-color: #FF8B94; background-color: #FFF6F0; display: inline-block; width: 100%;">
+                                <div class="card-header" style="border-color: #FF8B94; background-color: #FFFFFF;">
+                                    <h5 style="margin-bottom: 0;">Como você está se sentindo hoje?</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">Sabia que seu estado emocional tem grande impacto na sua produtividade? <i class="fa fa-heartbeat" aria-hidden="true"></i><br>Nós fornecemos conteúdo original <i class="fa fa-newspaper-o" aria-hidden="true"></i> com dicas exclusivas para o aprimoramento do seu bem-estar, rendimento e, consequentemente, qualidade de vida! <i class="fa fa-handshake-o" aria-hidden="true"></i></p>
+                                    <div class="btn-group-vertical" style="width: fit-content;">
+                                        <button type="button" class="btn btn-outline-primary">Otimista</button>
+                                        <button type="button" class="btn btn-outline-secondary">Desanimado</button>
+                                        <button type="button" class="btn btn-outline-danger">Irritado</button>
+                                        <button type="button" class="btn btn-outline-success">Confuso</button>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-muted" style="border-color: #FF8B94; background-color: #FFFFFF;">
+                                    <h7><i class="fa fa-info-circle" aria-hidden="true"></i> Saiba mais no nosso <a href="#">blog</a>!</h7>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </section>
+
+
+        <section class="jumbotron text-center" style="background-color: #A8E6CF; width: 100%; padding-bottom: 40px; padding-top: 40px; margin-bottom: 0px;">
+            <div class="container" style="width: 100%; display: inline-block;">
+                <div class="container" style="width: 100%;">
+                    <div class="row justify-content-md-center">
+                        <div class="col-md-12 col-lg-6">
+                            <div class="card-group">
+                                <div class="card" style="border-color: #DCEDC1;">
+                                    <div class="card-header" style="background-color: #DCEDC1; border-color: #DCEDC1;">
+                                        <img src="https://www.pngrepo.com/png/318384/180/3-user.png" class="card-img-top" alt="..." style="width: 40px;">
+                                        <h5 style="margin-bottom: 0;">Rede Social Exclusiva</h5>
+                                    </div>
+                                    <div class="card-body" style="background-color: #FFFFFF;">
+                                        <p class="card-text">Nós sabemos, a jornada de buscar disciplina é ardua e solitária...bom, era até agora! <i class="fa fa-child" aria-hidden="true"></i></p>
+                                        <p class="card-text">Valorizamos a comunidade <i class="fa fa-users" aria-hidden="true"></i> e o desenvolver de técnicas próprias. Compartilhe seus progressos, trabalhe em equipe e aprenda algo novo!</p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" style="background-color: #DCEDC1; border-color: #DCEDC1;">
+                                        <img src="https://www.pngrepo.com/png/318333/180/game.png" class="card-img-top" alt="..." style="width: 40px;">
+                                        <h5 style="margin-bottom: 0;">Gamificação</h5>
+                                        <br>
+                                    </div>
+                                    <div class="card-body" style="background-color: #FFFFFF;">
+                                        <p class="card-text">Não tem nada melhor que a satisfação do dever comprido. <i class="fa fa-smile-o" aria-hidden="true"></i> Mas uma recompensa também não faz mal, né?</p>
+                                        <p class="card-text">Destrave recompensas, evolua de nível e acumle conquistas com sua produtividade! <i class="fa fa-trophy" aria-hidden="true"></i></p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" style="background-color: #DCEDC1; border-color: #DCEDC1;">
+                                        <img src="https://www.pngrepo.com/png/318317/180/chart.png" class="card-img-top" alt="..." style="width: 40px;">
+                                        <h5 style="margin-bottom: 0;">Estatísticas de Rendimento</h5>
+                                    </div>
+                                    <div class="card-body" style="background-color: #FFFFFF;">
+                                        <p class="card-text">Já ouviu alguém dizendo que disciplina é liberdade? <i class="fa fa-music" aria-hidden="true"></i> Então...</p>
+                                        <p class="card-text">A gente complementa te dizendo que com a análise de seus melhores padrões de hábitos <i class="fa fa-line-chart" aria-hidden="true"></i>, você terá uma melhor percepção de si e conquistará foco!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-6">
+                            <div class="container" style="width: 100%; display: inline-block; text-align: right;">
+                                <img src="https://i.pinimg.com/originals/8e/ec/ac/8eecacc87d4796dab5c89966a52e200c.png" alt="..." style="width: 80%; display: inline-block;">
+                                <h3 class="jumbotron-heading" style="width: 100%; font-size: 1.8rem; text-align: right;"></i>Vamos realizar uma tarefa?</h3>
+                                <p class="lead text-muted" style="width: 80%; display: inline-block;">Nosso sistema de tarefas é equipado com agrupamento por categorias <i class="fa fa-clone" aria-hidden="true"></i> e subtarefas integradas, aplicação de técnicas de gerenciamento (como pomodoro) <i class="fa fa-sitemap" aria-hidden="true"></i> e personalização! <i class="fa fa-magic" aria-hidden="true"></i></p>
+                                <a target="_blank" href="novaTarefa/" class="btn btn-outline-success btn-lg active" role="button" aria-pressed="true">Iniciar Nova Tarefa</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-muted mt-5 mb-5">
+        <div class="container">
+            <p class="float-right">
+                <a href="#">Voltar para o topo</a>
+            </p>
+            <p>&copy; {{ info_sede.nome_empresa }}, 2021!</p>
+            <p> <i class="fa fa-star" aria-hidden="true"></i> Quer saber mais? <a target="_blank" href="{{ info_sede.email }}">Nos mande um e-mail</a> ou venha nos visitar no nosso <a target="_blank" href="{{ info_sede.instagram }}">Instagram</a>.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+</body>
+
+</html>
